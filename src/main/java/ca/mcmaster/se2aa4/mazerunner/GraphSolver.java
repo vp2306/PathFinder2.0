@@ -1,6 +1,9 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 import org.apache.logging.log4j.LogManager;
@@ -15,18 +18,18 @@ public class GraphSolver implements MazeSolver {
     public Path solve(Maze maze) {
         this.maze = maze;
         int[][] matrix = mazeToMatrixConverter(maze);
-        //print matrix
-        for(int i = 0; i < matrix.length; i++){
-            for (int j =0; j<matrix[0].length; j++){
-                System.err.print(matrix[i][j] + " ");
-            }
-            System.out.println();;
-        }
-        System.out.println(matrix);
-        System.out.println("rows: " + matrix[0].length);
-        System.out.println("cols: " + matrix.length); 
+        // //print matrix
+        // for(int i = 0; i < matrix.length; i++){
+        //     for (int j =0; j<matrix[0].length; j++){
+        //         System.err.print(matrix[i][j] + " ");
+        //     }
+        //     System.out.println();;
+        // }
+        // System.out.println(matrix);
+        // System.out.println("rows: " + matrix[0].length);
+        // System.out.println("cols: " + matrix.length); 
         
-        return pathBFS(matrix);
+        return calculatePath(pathBFS(matrix)).reverse();
     }
 
     private int[][] mazeToMatrixConverter(Maze maze) {
@@ -46,8 +49,9 @@ public class GraphSolver implements MazeSolver {
         return matrix;
     }
 
-    private Path pathBFS(int[][] matrix) {
-        Path path = new Path();
+    private Map<Position, Position> pathBFS(int[][] matrix) {
+        Map <Position, Position> childParentMap = new HashMap<>();
+        
 
         Queue<Position> queue = new LinkedList<>();
         boolean[][] visited = new boolean[matrix.length][matrix[0].length];
@@ -63,10 +67,10 @@ public class GraphSolver implements MazeSolver {
 
         while (!queue.isEmpty()) {
             Position currentPosition = queue.remove();
-            System.out.println(currentPosition + " visited");
+            // System.out.println(currentPosition + " visited");
 
             if (currentPosition.equals(destination)) {
-                return path;
+                return childParentMap;
             }
 
             for (int i = 0; i < 4; i++) {
@@ -77,11 +81,131 @@ public class GraphSolver implements MazeSolver {
                 if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length && !visited[y][x] && matrix[y][x] != 1) {
                     queue.add(new Position(x, y));
                     visited[y][x] = true;
+                    childParentMap.put(new Position(x, y), currentPosition);
                 }
             }
         }
+        // Print contents of parentMap
+        
 
+        return childParentMap;
+    }
+
+    private Path calculatePath(Map<Position, Position> childParentMap){
+        Path path = new Path();
+        // System.out.println("Parent Map:");
+        // for (Map.Entry<Position, Position> entry : childParentMap.entrySet()) {
+        //     System.out.println("Child: " + entry.getKey() + " Parent: " + entry.getValue());
+        // }
+
+        Position currentPosition = maze.getEnd();
+        Direction currentDirection = Direction.LEFT;
+        
+        do{
+            Position parentPosition = childParentMap.get(currentPosition);//get the value of current positions parent
+
+            Direction newDirection = getDirection(parentPosition, currentPosition);
+            
+                      
+            //if two directions not same, there is a turn
+            if (currentDirection.equals(newDirection)) {
+                path.addStep('F');
+            }
+            
+            switch (currentDirection) {
+                case UP:
+                    switch (newDirection) {
+                        case RIGHT:
+                            path.addStep('L');
+                            path.addStep('F');
+                            break;
+                        case LEFT:
+                            path.addStep('R');
+                            path.addStep('F');
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                    break;
+
+                case RIGHT:
+                    switch (newDirection) {
+                        case UP:
+                            path.addStep('R');
+                            path.addStep('F');
+                            break;
+                        case DOWN:
+                            path.addStep('L');
+                            path.addStep('F');
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                    break;
+
+                case DOWN:
+                    switch (newDirection) {
+                        case RIGHT:
+                            path.addStep('R');
+                            path.addStep('F');
+                            break;
+                        case LEFT:
+                            path.addStep('L');
+                            path.addStep('F');
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                    break;
+                case LEFT:
+                    switch (newDirection) {
+                        case UP:
+                            path.addStep('L');
+                            path.addStep('F');
+                            break;
+                        case DOWN:
+                            path.addStep('R');
+                            path.addStep('F');
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                    break;
+            
+                default:
+                    break;
+            }            
+
+            //update direction
+            currentDirection = newDirection;
+            currentPosition = parentPosition;
+
+           
+
+
+        } while(!currentPosition.equals(maze.getStart()));
         return path;
+    }
+
+    private Direction getDirection(Position parentPosition, Position currentPosition){
+        int diffX = parentPosition.x() - currentPosition.x();
+        int diffY = parentPosition.y() - currentPosition.y();
+
+        if (diffX == 0 && diffY == -1) {
+            return Direction.UP;
+        } else if(diffX == 1 && diffY == 0){
+            return Direction.RIGHT;
+        } else if(diffX ==0 && diffY == 1){
+            return Direction.DOWN;
+        } else if(diffX ==-1 && diffY == 0){
+            return Direction.LEFT;
+        }
+
+        return Direction.LEFT; //random deffault case
     }
 
         

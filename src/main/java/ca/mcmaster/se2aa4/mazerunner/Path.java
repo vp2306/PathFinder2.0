@@ -1,6 +1,8 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Path {
@@ -28,6 +30,10 @@ public class Path {
             }
         }
     }
+
+    
+
+
 
     /**
      * Expand a factorized string path into a canonical one.
@@ -125,5 +131,10 @@ public class Path {
         }
 
         return sb.toString();
+    }
+
+    public Path reverse() {
+        Collections.reverse(path);
+        return this;
     }
 }
