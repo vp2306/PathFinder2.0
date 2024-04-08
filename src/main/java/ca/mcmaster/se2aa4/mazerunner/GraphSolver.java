@@ -17,31 +17,20 @@ public class GraphSolver implements MazeSolver {
     @Override
     public Path solve(Maze maze) {
         this.maze = maze;
-        int[][] matrix = mazeToMatrixConverter(maze);
-        // //print matrix
-        // for(int i = 0; i < matrix.length; i++){
-        //     for (int j =0; j<matrix[0].length; j++){
-        //         System.err.print(matrix[i][j] + " ");
-        //     }
-        //     System.out.println();;
-        // }
-        // System.out.println(matrix);
-        // System.out.println("rows: " + matrix[0].length);
-        // System.out.println("cols: " + matrix.length); 
-        
+        Matrix matrix = mazeToMatrixConverter(maze);       
         return calculatePath(pathBFS(matrix)).reverse();
     }
 
-    private int[][] mazeToMatrixConverter(Maze maze) {
-        int[][] matrix = new int[maze.getSizeY()][maze.getSizeX()];
+    private Matrix mazeToMatrixConverter(Maze maze) {
+        Matrix matrix = new Matrix(maze.getSizeY(), maze.getSizeX());
 
         for (int i = 0; i < maze.getSizeY(); i++) {
             for (int j = 0; j < maze.getSizeX(); j++) {
                 Position pos = new Position(j, i); 
                 if (maze.isWall(pos)) {
-                    matrix[i][j] = 1; // if wall found
+                    matrix.set(i, j, 1); // if wall found
                 } else {
-                    matrix[i][j] = 0; // if no wall (pass)
+                    matrix.set(i, j, 0); // if no wall (pass)
                 }
             }
         }
@@ -49,12 +38,12 @@ public class GraphSolver implements MazeSolver {
         return matrix;
     }
 
-    private Map<Position, Position> pathBFS(int[][] matrix) {
+    private Map<Position, Position> pathBFS(Matrix matrix) {
         Map <Position, Position> childParentMap = new HashMap<>();
         
 
         Queue<Position> queue = new LinkedList<>();
-        boolean[][] visited = new boolean[matrix.length][matrix[0].length];
+        boolean[][] visited = new boolean[matrix.numRows()][matrix.numCols()];
         Position startNode = maze.getStart();
         Position destination = maze.getEnd();
 
@@ -78,7 +67,7 @@ public class GraphSolver implements MazeSolver {
                 int y = currentPosition.y() + directionY[i];
 
                 // check if surrounding node within bounds, and not visited, and not a wall. if so, add to queue and visited
-                if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length && !visited[y][x] && matrix[y][x] != 1) {
+                if (x >= 0 && x < matrix.numCols() && y >= 0 && y < matrix.numRows() && !visited[y][x] && matrix.get(y, x) != 1) {
                     queue.add(new Position(x, y));
                     visited[y][x] = true;
                     childParentMap.put(new Position(x, y), currentPosition);
@@ -93,11 +82,6 @@ public class GraphSolver implements MazeSolver {
 
     private Path calculatePath(Map<Position, Position> childParentMap){
         Path path = new Path();
-        // System.out.println("Parent Map:");
-        // for (Map.Entry<Position, Position> entry : childParentMap.entrySet()) {
-        //     System.out.println("Child: " + entry.getKey() + " Parent: " + entry.getValue());
-        // }
-
         Position currentPosition = maze.getEnd();
         Direction currentDirection = Direction.LEFT;
         
@@ -183,9 +167,6 @@ public class GraphSolver implements MazeSolver {
             //update direction
             currentDirection = newDirection;
             currentPosition = parentPosition;
-
-           
-
 
         } while(!currentPosition.equals(maze.getStart()));
         return path;
