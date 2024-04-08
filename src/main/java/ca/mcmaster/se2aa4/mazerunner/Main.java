@@ -16,7 +16,9 @@ public class Main {
         try {
             cmd = parser.parse(getParserOptions(), args);
             String filePath = cmd.getOptionValue('i');
+            long mazeStartTime = System.currentTimeMillis();
             Maze maze = new Maze(filePath);
+            long mazeEndTime = System.currentTimeMillis();
 
             if (cmd.getOptionValue("p") != null) {
                 logger.info("Validating path");
@@ -26,7 +28,12 @@ public class Main {
                 } else {
                     System.out.println("incorrect path");
                 }
-            } else {
+            } else if(cmd.hasOption("baseline")){
+                long mazeLoadTime = mazeEndTime - mazeStartTime;
+                System.out.println("Time to load maze from file (Milliseconds): " + mazeLoadTime);
+                benchmark(cmd, maze);
+                                
+            }else {
                 String method = cmd.getOptionValue("method", "righthand");
                 Path path = solveMaze(method, maze);
                 System.out.println(path.getFactorizedForm());
@@ -38,6 +45,29 @@ public class Main {
         }
 
         logger.info("End of MazeRunner");
+    }
+    private static void benchmark(CommandLine cmd, Maze maze) throws Exception{
+
+        //method calcs
+        String method = cmd.getOptionValue("method", "righthand");//getting the value in method and making the deffault value righthand since its slow
+        long methodStart = System.currentTimeMillis();
+        Path methodPath = solveMaze(method, maze);
+        long methodEnd = System.currentTimeMillis();
+        long methodTime = methodEnd - methodStart;
+        System.out.println("Method: " + method + "\nTime (milliseconds): " + methodTime);
+
+        //baseline calcs
+        String baseline = cmd.getOptionValue("baseline", "graph");//makin deffault graph since its the one i coded
+        long baselineStart = System.currentTimeMillis();
+        Path baselinePath = solveMaze(baseline, maze);
+        long baselineEnd = System.currentTimeMillis();
+        long baselineTime = baselineEnd - baselineStart;
+        System.out.println("Baseline: "+ baseline + "\n Time (milliseconds): " + baselineTime);
+        // System.out.println("baseline steps" + baselinePath.getPathSteps().size());
+        // System.out.println("method steps" + methodPath.getPathSteps().size());
+        double speedup = (double) baselinePath.getPathSteps().size() / methodPath.getPathSteps().size();
+        System.out.printf("Speedup: %.2f%n", speedup);
+        
     }
 
     /**
@@ -86,7 +116,7 @@ public class Main {
 
         options.addOption(new Option("p", true, "Path to be verified in maze"));
         options.addOption(new Option("method", true, "Specify which path computation algorithm will be used"));
-
+        options.addOption(new Option("baseline", true, "the baseline algorithm that will be used"));
         return options;
     }
 }
