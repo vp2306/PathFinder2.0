@@ -56,7 +56,7 @@ public class GraphSolver implements MazeSolver {
 
         while (!queue.isEmpty()) {
             Position currentPosition = queue.remove();
-            // System.out.println(currentPosition + " visited");
+
 
             if (currentPosition.equals(destination)) {
                 return childParentMap;
