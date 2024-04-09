@@ -1,0 +1,412 @@
+{
+  "events": [
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest",
+      "event": "call",
+      "id": 1,
+      "lineno": 34,
+      "method_id": "SolveWithBFSTestInvalid",
+      "path": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest",
+        "object_id": 623545006,
+        "value": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest@252a8aae"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 2,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 1775072816,
+          "value": "Position(0,0)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.008081561,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1835713430,
+        "value": "true"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 4,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 831931099,
+          "value": "Position(0,1)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0003507367,
+      "event": "return",
+      "id": 5,
+      "parent_id": 4,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1835713430,
+        "value": "true"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 6,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 1756435781,
+          "value": "Position(0,2)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000330005,
+      "event": "return",
+      "id": 7,
+      "parent_id": 6,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 2097217770,
+        "value": "false"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 8,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 897303688,
+          "value": "Position(4,0)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.000117661,
+      "event": "return",
+      "id": 9,
+      "parent_id": 8,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1835713430,
+        "value": "true"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 10,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 1319203143,
+          "value": "Position(4,1)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000445728,
+      "event": "return",
+      "id": 11,
+      "parent_id": 10,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1835713430,
+        "value": "true"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 12,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 786058987,
+          "value": "Position(4,2)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000378455,
+      "event": "return",
+      "id": 13,
+      "parent_id": 12,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1835713430,
+        "value": "true"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 14,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 1537805706,
+          "value": "Position(4,3)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000402184,
+      "event": "return",
+      "id": 15,
+      "parent_id": 14,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1835713430,
+        "value": "true"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+      "event": "call",
+      "id": 16,
+      "lineno": 83,
+      "method_id": "isWall",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "pos",
+          "object_id": 815648243,
+          "value": "Position(4,4)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Maze",
+        "object_id": 2122480101,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Maze@7e8279e5"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000367885,
+      "event": "return",
+      "id": 17,
+      "parent_id": 16,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1835713430,
+        "value": "true"
+      },
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.012915511,
+      "event": "return",
+      "exceptions": [
+        {
+          "class": "java.lang.Exception",
+          "lineno": 73,
+          "message": "Invalid maze (no end position available)",
+          "object_id": 161615037,
+          "path": "Maze.java"
+        }
+      ],
+      "id": 18,
+      "parent_id": 1,
+      "thread_id": 1
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "Graph solver solve with BFS invalid",
+    "app": "a3-maze-runner-take-two-vp2306",
+    "language": {
+      "name": "java",
+      "version": "21.0.2+13-Ubuntu-122.04.1",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "junit",
+      "type": "tests"
+    },
+    "recording": {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest",
+      "method_id": "SolveWithBFSTestInvalid"
+    },
+    "git": {
+      "repository": "git@github.com:2AA4-W24/a3-maze-runner-take-two-vp2306.git",
+      "branch": "main",
+      "commit": "c11a725b9b66f84f27cf3f88716a9b72406481c5"
+    },
+    "source_location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:34",
+    "frameworks": [
+      {
+        "name": "JUnit",
+        "version": "5"
+      }
+    ],
+    "test_status": "failed",
+    "test_failure": {
+      "message": "Invalid maze (no end position available)",
+      "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:34"
+    }
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "SolveWithBFSTestInvalid",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:34"
+                        }
+                      ],
+                      "name": "GraphSolverTest",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "isWall",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java:83"
+                        }
+                      ],
+                      "name": "Maze",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "mazerunner",
+                  "type": "package"
+                }
+              ],
+              "name": "se2aa4",
+              "type": "package"
+            }
+          ],
+          "name": "mcmaster",
+          "type": "package"
+        }
+      ],
+      "name": "ca",
+      "type": "package"
+    }
+  ]
+}

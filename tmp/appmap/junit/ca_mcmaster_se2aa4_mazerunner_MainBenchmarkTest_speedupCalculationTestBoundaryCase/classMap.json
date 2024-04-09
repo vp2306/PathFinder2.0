@@ -1,0 +1,50 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "speedupCalculationTestBoundaryCase",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/MainBenchmarkTest.java:29"
+                      }
+                    ],
+                    "name": "MainBenchmarkTest",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "speedupCalc",
+                        "type": "function",
+                        "static": true,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Main.java:76"
+                      }
+                    ],
+                    "name": "Main",
+                    "type": "class"
+                  }
+                ],
+                "name": "mazerunner",
+                "type": "package"
+              }
+            ],
+            "name": "se2aa4",
+            "type": "package"
+          }
+        ],
+        "name": "mcmaster",
+        "type": "package"
+      }
+    ],
+    "name": "ca",
+    "type": "package"
+  }
+]

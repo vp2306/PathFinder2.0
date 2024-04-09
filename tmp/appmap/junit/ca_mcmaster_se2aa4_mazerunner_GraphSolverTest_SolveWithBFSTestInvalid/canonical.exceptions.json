@@ -1,0 +1,11 @@
+[
+  {
+    "class": "java.lang.Exception",
+    "message": "Invalid maze (no end position available)",
+    "stack": [
+      "Maze.java:73",
+      "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:34"
+    ],
+    "location": "Maze.java:73"
+  }
+]

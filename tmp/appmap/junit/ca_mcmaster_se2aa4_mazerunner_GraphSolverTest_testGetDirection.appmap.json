@@ -1,0 +1,154 @@
+{
+  "events": [
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest",
+      "event": "call",
+      "id": 1,
+      "lineno": 48,
+      "method_id": "testGetDirection",
+      "path": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest",
+        "object_id": 595603777,
+        "value": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest@23803141"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.GraphSolver",
+      "event": "call",
+      "id": 2,
+      "lineno": 176,
+      "method_id": "getDirection",
+      "parameters": [
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "parentPosition",
+          "object_id": 1917268480,
+          "value": "Position(1,1)"
+        },
+        {
+          "class": "ca.mcmaster.se2aa4.mazerunner.Position",
+          "kind": "req",
+          "name": "currentPosition",
+          "object_id": 1592789220,
+          "value": "Position(1,2)"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/GraphSolver.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.GraphSolver",
+        "object_id": 1632087153,
+        "value": "ca.mcmaster.se2aa4.mazerunner.GraphSolver@6147ac71"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000611378,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Direction",
+        "object_id": 66895735,
+        "value": "UP"
+      },
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0001122573,
+      "event": "return",
+      "id": 4,
+      "parent_id": 1,
+      "thread_id": 1
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "Graph solver test get direction",
+    "app": "a3-maze-runner-take-two-vp2306",
+    "language": {
+      "name": "java",
+      "version": "21.0.2+13-Ubuntu-122.04.1",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "junit",
+      "type": "tests"
+    },
+    "recording": {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.GraphSolverTest",
+      "method_id": "testGetDirection"
+    },
+    "git": {
+      "repository": "git@github.com:2AA4-W24/a3-maze-runner-take-two-vp2306.git",
+      "branch": "main",
+      "commit": "c11a725b9b66f84f27cf3f88716a9b72406481c5"
+    },
+    "source_location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:48",
+    "frameworks": [
+      {
+        "name": "JUnit",
+        "version": "5"
+      }
+    ],
+    "test_status": "succeeded"
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "getDirection",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/GraphSolver.java:176"
+                        }
+                      ],
+                      "name": "GraphSolver",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "testGetDirection",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:48"
+                        }
+                      ],
+                      "name": "GraphSolverTest",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "mazerunner",
+                  "type": "package"
+                }
+              ],
+              "name": "se2aa4",
+              "type": "package"
+            }
+          ],
+          "name": "mcmaster",
+          "type": "package"
+        }
+      ],
+      "name": "ca",
+      "type": "package"
+    }
+  ]
+}

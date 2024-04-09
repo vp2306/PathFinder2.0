@@ -1,0 +1,146 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "mazeToMatrixConverter",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/GraphSolver.java:25"
+                      },
+                      {
+                        "name": "pathBFS",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/GraphSolver.java:42"
+                      },
+                      {
+                        "name": "solve",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/GraphSolver.java:19"
+                      }
+                    ],
+                    "name": "GraphSolver",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "numRows",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Matrix.java:19"
+                      },
+                      {
+                        "name": "set",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Matrix.java:15"
+                      },
+                      {
+                        "name": "numCols",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Matrix.java:23"
+                      },
+                      {
+                        "name": "get",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Matrix.java:11"
+                      }
+                    ],
+                    "name": "Matrix",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "reverse",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java:137"
+                      },
+                      {
+                        "name": "addStep",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java:81"
+                      }
+                    ],
+                    "name": "Path",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "isWall",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java:83"
+                      },
+                      {
+                        "name": "validatePath",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Maze.java:129"
+                      }
+                    ],
+                    "name": "Maze",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "turnRight",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Direction.java:15"
+                      },
+                      {
+                        "name": "turnLeft",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Direction.java:39"
+                      }
+                    ],
+                    "name": "Direction",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "SolveWithBFSTestDirect",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:27"
+                      }
+                    ],
+                    "name": "GraphSolverTest",
+                    "type": "class"
+                  }
+                ],
+                "name": "mazerunner",
+                "type": "package"
+              }
+            ],
+            "name": "se2aa4",
+            "type": "package"
+          }
+        ],
+        "name": "mcmaster",
+        "type": "package"
+      }
+    ],
+    "name": "ca",
+    "type": "package"
+  }
+]

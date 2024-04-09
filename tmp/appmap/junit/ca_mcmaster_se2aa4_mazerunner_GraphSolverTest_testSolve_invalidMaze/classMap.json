@@ -1,0 +1,38 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "testSolve_invalidMaze",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:30"
+                      }
+                    ],
+                    "name": "GraphSolverTest",
+                    "type": "class"
+                  }
+                ],
+                "name": "mazerunner",
+                "type": "package"
+              }
+            ],
+            "name": "se2aa4",
+            "type": "package"
+          }
+        ],
+        "name": "mcmaster",
+        "type": "package"
+      }
+    ],
+    "name": "ca",
+    "type": "package"
+  }
+]

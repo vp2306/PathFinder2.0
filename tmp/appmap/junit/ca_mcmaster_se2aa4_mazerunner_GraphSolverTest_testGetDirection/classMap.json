@@ -1,0 +1,50 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "getDirection",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/GraphSolver.java:176"
+                      }
+                    ],
+                    "name": "GraphSolver",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "testGetDirection",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/GraphSolverTest.java:48"
+                      }
+                    ],
+                    "name": "GraphSolverTest",
+                    "type": "class"
+                  }
+                ],
+                "name": "mazerunner",
+                "type": "package"
+              }
+            ],
+            "name": "se2aa4",
+            "type": "package"
+          }
+        ],
+        "name": "mcmaster",
+        "type": "package"
+      }
+    ],
+    "name": "ca",
+    "type": "package"
+  }
+]

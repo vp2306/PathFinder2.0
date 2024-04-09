@@ -1,0 +1,401 @@
+{
+  "events": [
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.PathTest",
+      "event": "call",
+      "id": 1,
+      "lineno": 24,
+      "method_id": "expandedPath",
+      "path": "src/test/java/ca/mcmaster/se2aa4/mazerunner/PathTest.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.PathTest",
+        "object_id": 30173198,
+        "value": "ca.mcmaster.se2aa4.mazerunner.PathTest@1cc680e"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 2,
+      "lineno": 45,
+      "method_id": "expandFactorizedStringPath",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "path",
+          "object_id": 836614448,
+          "value": "4F 3R L"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.008402919,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 448131210,
+        "value": "FFFF RRR L"
+      },
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 4,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1979525146,
+          "value": "F"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0004754566,
+      "event": "return",
+      "id": 5,
+      "parent_id": 4,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 6,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1979525146,
+          "value": "F"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000661407,
+      "event": "return",
+      "id": 7,
+      "parent_id": 6,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 8,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1979525146,
+          "value": "F"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000227481,
+      "event": "return",
+      "id": 9,
+      "parent_id": 8,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 10,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1979525146,
+          "value": "F"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.000038998,
+      "event": "return",
+      "id": 11,
+      "parent_id": 10,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 12,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1647440674,
+          "value": "R"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000532279,
+      "event": "return",
+      "id": 13,
+      "parent_id": 12,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 14,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1647440674,
+          "value": "R"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0001076182,
+      "event": "return",
+      "id": 15,
+      "parent_id": 14,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 16,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1647440674,
+          "value": "R"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000350765,
+      "event": "return",
+      "id": 17,
+      "parent_id": 16,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Path",
+      "event": "call",
+      "id": 18,
+      "lineno": 81,
+      "method_id": "addStep",
+      "parameters": [
+        {
+          "class": "java.lang.Character",
+          "kind": "req",
+          "name": "step",
+          "object_id": 1512979878,
+          "value": "L"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.Path",
+        "object_id": 317644782,
+        "value": "ca.mcmaster.se2aa4.mazerunner.Path@12eedfee"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0000240077,
+      "event": "return",
+      "id": 19,
+      "parent_id": 18,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.022036225,
+      "event": "return",
+      "id": 20,
+      "parent_id": 1,
+      "thread_id": 1
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "Path expanded path",
+    "app": "a3-maze-runner-take-two-vp2306",
+    "language": {
+      "name": "java",
+      "version": "21.0.2+13-Ubuntu-122.04.1",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "junit",
+      "type": "tests"
+    },
+    "recording": {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.PathTest",
+      "method_id": "expandedPath"
+    },
+    "git": {
+      "repository": "git@github.com:2AA4-W24/a3-maze-runner-take-two-vp2306.git",
+      "branch": "main",
+      "commit": "c11a725b9b66f84f27cf3f88716a9b72406481c5"
+    },
+    "source_location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/PathTest.java:24",
+    "frameworks": [
+      {
+        "name": "JUnit",
+        "version": "5"
+      }
+    ],
+    "test_status": "succeeded"
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "expandedPath",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/PathTest.java:24"
+                        }
+                      ],
+                      "name": "PathTest",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "addStep",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java:81"
+                        },
+                        {
+                          "name": "expandFactorizedStringPath",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Path.java:45"
+                        }
+                      ],
+                      "name": "Path",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "mazerunner",
+                  "type": "package"
+                }
+              ],
+              "name": "se2aa4",
+              "type": "package"
+            }
+          ],
+          "name": "mcmaster",
+          "type": "package"
+        }
+      ],
+      "name": "ca",
+      "type": "package"
+    }
+  ]
+}

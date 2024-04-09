@@ -21,7 +21,7 @@ public class GraphSolver implements MazeSolver {
         return calculatePath(pathBFS(matrix)).reverse();
     }
 
-    private Matrix mazeToMatrixConverter(Maze maze) {
+    public Matrix mazeToMatrixConverter(Maze maze) {
         Matrix matrix = new Matrix(maze.getSizeY(), maze.getSizeX());
 
         for (int i = 0; i < maze.getSizeY(); i++) {
@@ -38,7 +38,7 @@ public class GraphSolver implements MazeSolver {
         return matrix;
     }
 
-    private Map<Position, Position> pathBFS(Matrix matrix) {
+    public Map<Position, Position> pathBFS(Matrix matrix) {
         Map <Position, Position> childParentMap = new HashMap<>();
         
 

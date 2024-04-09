@@ -1,0 +1,149 @@
+{
+  "events": [
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.MainBenchmarkTest",
+      "event": "call",
+      "id": 1,
+      "lineno": 11,
+      "method_id": "speedupCalculationTest",
+      "path": "src/test/java/ca/mcmaster/se2aa4/mazerunner/MainBenchmarkTest.java",
+      "receiver": {
+        "class": "ca.mcmaster.se2aa4.mazerunner.MainBenchmarkTest",
+        "object_id": 1699511597,
+        "value": "ca.mcmaster.se2aa4.mazerunner.MainBenchmarkTest@654c7d2d"
+      },
+      "static": false,
+      "thread_id": 1
+    },
+    {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.Main",
+      "event": "call",
+      "id": 2,
+      "lineno": 76,
+      "method_id": "speedupCalc",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "baseline",
+          "object_id": 1563528849,
+          "value": "12553"
+        },
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "method",
+          "object_id": 697001207,
+          "value": "354"
+        }
+      ],
+      "path": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Main.java",
+      "static": true,
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.0036440445,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "java.lang.Double",
+        "object_id": 288887829,
+        "value": "35.0"
+      },
+      "thread_id": 1
+    },
+    {
+      "elapsed": 0.15113068,
+      "event": "return",
+      "id": 4,
+      "parent_id": 1,
+      "thread_id": 1
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "Main benchmark speedup calculation",
+    "app": "a3-maze-runner-take-two-vp2306",
+    "language": {
+      "name": "java",
+      "version": "21.0.2+13-Ubuntu-122.04.1",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "junit",
+      "type": "tests"
+    },
+    "recording": {
+      "defined_class": "ca.mcmaster.se2aa4.mazerunner.MainBenchmarkTest",
+      "method_id": "speedupCalculationTest"
+    },
+    "git": {
+      "repository": "git@github.com:2AA4-W24/a3-maze-runner-take-two-vp2306.git",
+      "branch": "main",
+      "commit": "c11a725b9b66f84f27cf3f88716a9b72406481c5"
+    },
+    "source_location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/MainBenchmarkTest.java:11",
+    "frameworks": [
+      {
+        "name": "JUnit",
+        "version": "5"
+      }
+    ],
+    "test_status": "succeeded"
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "speedupCalc",
+                          "type": "function",
+                          "static": true,
+                          "location": "src/main/java/ca/mcmaster/se2aa4/mazerunner/Main.java:76"
+                        }
+                      ],
+                      "name": "Main",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "speedupCalculationTest",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/test/java/ca/mcmaster/se2aa4/mazerunner/MainBenchmarkTest.java:11"
+                        }
+                      ],
+                      "name": "MainBenchmarkTest",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "mazerunner",
+                  "type": "package"
+                }
+              ],
+              "name": "se2aa4",
+              "type": "package"
+            }
+          ],
+          "name": "mcmaster",
+          "type": "package"
+        }
+      ],
+      "name": "ca",
+      "type": "package"
+    }
+  ]
+}

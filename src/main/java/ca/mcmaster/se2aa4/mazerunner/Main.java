@@ -1,5 +1,7 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
+import java.math.BigDecimal;
+
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -50,24 +52,33 @@ public class Main {
 
         //method calcs
         String method = cmd.getOptionValue("method", "righthand");//getting the value in method and making the deffault value righthand since its slow
-        long methodStart = System.currentTimeMillis();
+        double methodStart = System.currentTimeMillis();
         Path methodPath = solveMaze(method, maze);
-        long methodEnd = System.currentTimeMillis();
-        long methodTime = methodEnd - methodStart;
-        System.out.println("Method: " + method + "\nTime (milliseconds): " + methodTime);
+        double methodEnd = System.currentTimeMillis();
+        double methodTime = methodEnd - methodStart;
+        System.out.println("Method: " + method + "\nTime (milliseconds): " + sigFigRounder(methodTime));
 
         //baseline calcs
         String baseline = cmd.getOptionValue("baseline", "graph");//makin deffault graph since its the one i coded
-        long baselineStart = System.currentTimeMillis();
+        double baselineStart = System.currentTimeMillis();
         Path baselinePath = solveMaze(baseline, maze);
-        long baselineEnd = System.currentTimeMillis();
-        long baselineTime = baselineEnd - baselineStart;
-        System.out.println("Baseline: "+ baseline + "\n Time (milliseconds): " + baselineTime);
+        double baselineEnd = System.currentTimeMillis();
+        double baselineTime = baselineEnd - baselineStart;
+        System.out.println("Baseline: "+ baseline + "\n Time (milliseconds): " + sigFigRounder(baselineTime));
         // System.out.println("baseline steps" + baselinePath.getPathSteps().size());
         // System.out.println("method steps" + methodPath.getPathSteps().size());
-        double speedup = (double) baselinePath.getPathSteps().size() / methodPath.getPathSteps().size();
-        System.out.printf("Speedup: %.2f%n", speedup);
+        int baselineSteps = baselinePath.getPathSteps().size();
+        int methodSteps = methodPath.getPathSteps().size();
+        System.out.println("Speedup: " + speedupCalc(baselineSteps, methodSteps));
         
+    }
+    public static double speedupCalc(int baseline, int method){
+        return sigFigRounder(baseline / method);
+    }
+
+    //this all the numbers to 2 sigfigs
+    private static double sigFigRounder(double numberToRound){
+        return new BigDecimal(Double.toString(numberToRound)).round(new java.math.MathContext(2)).doubleValue();
     }
 
     /**

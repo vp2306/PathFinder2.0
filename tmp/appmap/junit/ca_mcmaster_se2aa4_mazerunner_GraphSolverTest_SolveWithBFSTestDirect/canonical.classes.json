@@ -1,0 +1,8 @@
+[
+  "ca/mcmaster/se2aa4/mazerunner/Direction",
+  "ca/mcmaster/se2aa4/mazerunner/GraphSolver",
+  "ca/mcmaster/se2aa4/mazerunner/GraphSolverTest",
+  "ca/mcmaster/se2aa4/mazerunner/Matrix",
+  "ca/mcmaster/se2aa4/mazerunner/Maze",
+  "ca/mcmaster/se2aa4/mazerunner/Path"
+]
