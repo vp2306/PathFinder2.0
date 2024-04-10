@@ -1,6 +1,7 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
@@ -37,7 +38,7 @@ public class Main {
                                 
             }else {
                 String method = cmd.getOptionValue("method", "righthand");
-                Path path = solveMaze(method, maze);
+                Path path = solveMaze(method, maze, new ConcreteVisitorSolver(maze));
                 System.out.println(path.getFactorizedForm());
             }
         } catch (Exception e) {
@@ -49,37 +50,26 @@ public class Main {
         logger.info("End of MazeRunner");
     }
     private static void benchmark(CommandLine cmd, Maze maze) throws Exception{
-
-        //method calcs
+        //method time
         String method = cmd.getOptionValue("method", "righthand");//getting the value in method and making the deffault value righthand since its slow
         double methodStart = System.currentTimeMillis();
-        Path methodPath = solveMaze(method, maze);
+        Path methodPath = solveMaze(method, maze, new ConcreteVisitorSolver(maze));
         double methodEnd = System.currentTimeMillis();
         double methodTime = methodEnd - methodStart;
-        System.out.println("Method: " + method + "\nTime (milliseconds): " + sigFigRounder(methodTime));
-
-        //baseline calcs
+        System.out.println("Method: " + method + "\nTime (milliseconds): " + Benchmark.sigFigRounder(methodTime));
+        //baseline time
         String baseline = cmd.getOptionValue("baseline", "graph");//makin deffault graph since its the one i coded
         double baselineStart = System.currentTimeMillis();
-        Path baselinePath = solveMaze(baseline, maze);
+        Path baselinePath = solveMaze(baseline, maze, new ConcreteVisitorSolver(maze));
         double baselineEnd = System.currentTimeMillis();
         double baselineTime = baselineEnd - baselineStart;
-        System.out.println("Baseline: "+ baseline + "\n Time (milliseconds): " + sigFigRounder(baselineTime));
-        // System.out.println("baseline steps" + baselinePath.getPathSteps().size());
-        // System.out.println("method steps" + methodPath.getPathSteps().size());
-        int baselineSteps = baselinePath.getPathSteps().size();
-        int methodSteps = methodPath.getPathSteps().size();
-        System.out.println("Speedup: " + speedupCalc(baselineSteps, methodSteps));
+        System.out.println("Baseline: "+ baseline + "\nTime (milliseconds): " + Benchmark.sigFigRounder(baselineTime));
+
+
+        System.out.println("Speedup: " + Benchmark.speedupCalc(baselinePath.getPathSteps().size(), methodPath.getPathSteps().size()));
         
     }
-    public static double speedupCalc(int baseline, int method){
-        return sigFigRounder(baseline / method);
-    }
-
-    //this all the numbers to 2 sigfigs
-    private static double sigFigRounder(double numberToRound){
-        return new BigDecimal(Double.toString(numberToRound)).round(new java.math.MathContext(2)).doubleValue();
-    }
+    
 
     /**
      * Solve provided maze with specified method.
@@ -89,28 +79,27 @@ public class Main {
      * @return Maze solution path
      * @throws Exception If provided method does not exist
      */
-    private static Path solveMaze(String method, Maze maze) throws Exception {
-        MazeSolver solver = null;
+    private static Path solveMaze(String method, Maze maze, VisitorSolver visitor) throws Exception {
+        //MazeSolver solver = null;
+        logger.info("Computing path");
         switch (method) {
             case "righthand" -> {
                 logger.debug("RightHand algorithm chosen.");
-                solver = new RightHandSolver();
+                return visitor.visit(new RightHandSolver());
             }
             case "tremaux" -> {
                 logger.debug("Tremaux algorithm chosen.");
-                solver = new TremauxSolver();
+                return visitor.visit(new TremauxSolver());
             }
             case "bfs" -> {
                 logger.debug("Graph algorithm (BFS) chosen");
-                solver = new BFSSolver();
+                return visitor.visit(new BFSSolver());
             }
             default -> {
                 throw new Exception("Maze solving method '" + method + "' not supported.");
             }
         }
 
-        logger.info("Computing path");
-        return solver.solve(maze);
     }
 
     /**

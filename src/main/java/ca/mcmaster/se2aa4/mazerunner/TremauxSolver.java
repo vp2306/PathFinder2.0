@@ -21,6 +21,10 @@ public class TremauxSolver implements MazeSolver {
         logger.debug("Tracing path...");
         return tracePath();
     }
+    @Override
+    public void accept(VisitorSolver visitor) {
+        visitor.visit(this);
+    }
 
     /**
      * Mark entrances in marks 2D array.

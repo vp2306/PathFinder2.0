@@ -22,6 +22,11 @@ public class BFSSolver implements MazeSolver {
         return calculatePath(pathBFS(matrix)).reverse();
     }
 
+    @Override
+    public void accept(VisitorSolver visitor) {
+        visitor.visit(this);
+    }
+
     //citations provided in report
     public PathTracker pathBFS(Matrix matrix) {
 

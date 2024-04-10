@@ -7,6 +7,11 @@ public class RightHandSolver implements MazeSolver {
     private static final Logger logger = LogManager.getLogger();
 
     @Override
+    public void accept(VisitorSolver visitor) {
+        visitor.visit(this);
+    }
+    
+    @Override
     public Path solve(Maze maze) {
         Path path = new Path();
 
