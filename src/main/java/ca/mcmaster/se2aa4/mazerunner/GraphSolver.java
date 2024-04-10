@@ -22,8 +22,8 @@ public class GraphSolver implements MazeSolver {
     }
 
     
-    public Map<Position, Position> pathBFS(Matrix matrix) {
-        Map <Position, Position> childParentMap = new HashMap<>();
+    public PathTracker pathBFS(Matrix matrix) {
+        PathTracker pathTrack = new PathTracker();
         
 
         Queue<Position> queue = new LinkedList<>();
@@ -43,7 +43,7 @@ public class GraphSolver implements MazeSolver {
 
 
             if (currentPosition.equals(destination)) {
-                return childParentMap;
+                return pathTrack;
             }
 
             for (int i = 0; i < 4; i++) {
@@ -54,23 +54,20 @@ public class GraphSolver implements MazeSolver {
                 if (x >= 0 && x < matrix.numCols() && y >= 0 && y < matrix.numRows() && !visited[y][x] && matrix.get(y, x) != 1) {
                     queue.add(new Position(x, y));
                     visited[y][x] = true;
-                    childParentMap.put(new Position(x, y), currentPosition);
+                    pathTrack.addChildParentPair(new Position(x, y), currentPosition);
                 }
             }
         }
-        // Print contents of parentMap
-        
-
-        return childParentMap;
+        return pathTrack;
     }
 
-    private Path calculatePath(Map<Position, Position> childParentMap){
+    private Path calculatePath(PathTracker pathTrack){
         Path path = new Path();
         Position currentPosition = maze.getEnd();
         Direction currentDirection = Direction.LEFT;
         
         do{
-            Position parentPosition = childParentMap.get(currentPosition);//get the value of current positions parent
+            Position parentPosition = pathTrack.getParent(currentPosition);//get the value of current positions parent
 
             Direction newDirection = getDirection(parentPosition, currentPosition);
             
