@@ -22,7 +22,7 @@ public class BFSSolver implements MazeSolver {
         return calculatePath(pathBFS(matrix)).reverse();
     }
 
-    
+    //citations provided in report
     public PathTracker pathBFS(Matrix matrix) {
 
         //PathTracker is an ADT to keep track of the parent and child nodes
