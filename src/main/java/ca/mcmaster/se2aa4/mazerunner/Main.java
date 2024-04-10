@@ -1,6 +1,7 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
@@ -49,37 +50,26 @@ public class Main {
         logger.info("End of MazeRunner");
     }
     private static void benchmark(CommandLine cmd, Maze maze) throws Exception{
-
-        //method calcs
+        //method time
         String method = cmd.getOptionValue("method", "righthand");//getting the value in method and making the deffault value righthand since its slow
         double methodStart = System.currentTimeMillis();
         Path methodPath = solveMaze(method, maze, new ConcreteVisitorSolver(maze));
         double methodEnd = System.currentTimeMillis();
         double methodTime = methodEnd - methodStart;
-        System.out.println("Method: " + method + "\nTime (milliseconds): " + sigFigRounder(methodTime));
-
-        //baseline calcs
+        System.out.println("Method: " + method + "\nTime (milliseconds): " + Benchmark.sigFigRounder(methodTime));
+        //baseline time
         String baseline = cmd.getOptionValue("baseline", "graph");//makin deffault graph since its the one i coded
         double baselineStart = System.currentTimeMillis();
         Path baselinePath = solveMaze(baseline, maze, new ConcreteVisitorSolver(maze));
         double baselineEnd = System.currentTimeMillis();
         double baselineTime = baselineEnd - baselineStart;
-        System.out.println("Baseline: "+ baseline + "\nTime (milliseconds): " + sigFigRounder(baselineTime));
-        // System.out.println("baseline steps" + baselinePath.getPathSteps().size());
-        // System.out.println("method steps" + methodPath.getPathSteps().size());
-        int baselineSteps = baselinePath.getPathSteps().size();
-        int methodSteps = methodPath.getPathSteps().size();
-        System.out.println("Speedup: " + speedupCalc(baselineSteps, methodSteps));
+        System.out.println("Baseline: "+ baseline + "\nTime (milliseconds): " + Benchmark.sigFigRounder(baselineTime));
+
+
+        System.out.println("Speedup: " + Benchmark.speedupCalc(baselinePath.getPathSteps().size(), methodPath.getPathSteps().size()));
         
     }
-    public static double speedupCalc(int baseline, int method){
-        return sigFigRounder(baseline / method);
-    }
-
-    //this all the numbers to 2 sigfigs
-    private static double sigFigRounder(double numberToRound){
-        return new BigDecimal(Double.toString(numberToRound)).round(new java.math.MathContext(2)).doubleValue();
-    }
+    
 
     /**
      * Solve provided maze with specified method.

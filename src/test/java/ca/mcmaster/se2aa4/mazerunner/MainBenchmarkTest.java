@@ -14,7 +14,7 @@ public class MainBenchmarkTest {
         
         double expectedSpeedup = 35.0;
 
-        double speedup = Main.speedupCalc(baselineSteps, methodSteps);
+        double speedup = Benchmark.speedupCalc(baselineSteps, methodSteps);
 
         assertEquals(expectedSpeedup, speedup);
      
@@ -30,7 +30,7 @@ public class MainBenchmarkTest {
         
         double expectedSpeedup = 0.0;
 
-        double speedup = Main.speedupCalc(baselineSteps, methodSteps);
+        double speedup = Benchmark.speedupCalc(baselineSteps, methodSteps);
 
         assertEquals(expectedSpeedup, speedup);
 
