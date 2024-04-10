@@ -100,9 +100,9 @@ public class Main {
                 logger.debug("Tremaux algorithm chosen.");
                 solver = new TremauxSolver();
             }
-            case "graph" -> {
+            case "bfs" -> {
                 logger.debug("Graph algorithm (BFS) chosen");
-                solver = new GraphSolver();
+                solver = new BFSSolver();
             }
             default -> {
                 throw new Exception("Maze solving method '" + method + "' not supported.");
