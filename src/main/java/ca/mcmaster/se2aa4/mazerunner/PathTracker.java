@@ -5,6 +5,8 @@ import java.util.Map;
 public class PathTracker {
     private Map<Position, Position> childParentMap;
 
+    //map containing relations between the different nodes
+
     public PathTracker() {
         this.childParentMap = new HashMap<>();
     }
