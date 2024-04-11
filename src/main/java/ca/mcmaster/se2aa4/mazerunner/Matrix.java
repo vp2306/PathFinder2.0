@@ -3,6 +3,7 @@ package ca.mcmaster.se2aa4.mazerunner;
 public class Matrix {
     private int[][] data;
 
+    //methods for the matrix ADT
     public Matrix(int rows, int cols) {
         this.data = new int[rows][cols];
     }

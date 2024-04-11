@@ -7,6 +7,7 @@ public class ConcreteVisitorSolver implements VisitorSolver {
     public ConcreteVisitorSolver(Maze maze){
         this.maze = maze;
     }
+    //implementations of visit from the interface
 
     @Override
     public Path visit(BFSSolver solver){
