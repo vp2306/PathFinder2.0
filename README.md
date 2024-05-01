@@ -1,4 +1,4 @@
-# Assignment A1 - Maze Runner
+
 
 - **Student**: [VEDANT PATEL](patev70@mcmaster.ca)
 - **Program**: B. Eng. In Software Engineering
