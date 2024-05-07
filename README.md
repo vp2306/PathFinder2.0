@@ -1,12 +1,6 @@
 
 
-- **Student**: [VEDANT PATEL](patev70@mcmaster.ca)
-- **Program**: B. Eng. In Software Engineering
-- **Course code**: SFWRENG 2AA4
-- **Course Title**: Software Design I - Introduction to Software Development
-- Term: _Level II - Winter 2024_
-
-- **Credit provided to Alexandre Lachance for providing starter code (a1-solution) **
+- **Credit provided to Alexandre Lachance for providing starter code **
 
 ## Business Logic Specification
 
